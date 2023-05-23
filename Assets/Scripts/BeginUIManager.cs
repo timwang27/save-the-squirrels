@@ -40,4 +40,10 @@ public class BeginUIManager : MonoBehaviour
     {
         SceneManager.LoadScene("Map");
     }
+
+    public void RestartGame() 
+    {
+        PlayerPrefs.SetInt("currEvent", 0);
+        SceneManager.LoadScene("Map");
+    }
 }

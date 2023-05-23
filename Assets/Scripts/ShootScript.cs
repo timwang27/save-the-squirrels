@@ -28,9 +28,7 @@ public class ShootScript : MonoBehaviour
             {
                 ammoText.text = (ammo.ToString() + "/" + startingAmmo);
             }
-            Debug.Log("yyyyyy");
             RaycastHit hit;
-            Debug.Log("SAKLJD");
             if (Physics.Raycast(arCamera.transform.position, arCamera.transform.forward, out hit))
             {
                 if (hit.transform.name == "ShootSquirrel(Clone)")
@@ -51,7 +49,6 @@ public class ShootScript : MonoBehaviour
             }
             else
             {
-                Debug.Log("this is not wack");
                 FindObjectOfType<ShootAudioManager>().Play("MissSound");
             }
             if (ammo == 0)
