@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7386083038387452239
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7386083038387452237}
+  - component: {fileID: 7386083038387452238}
+  m_Layer: 0
+  m_Name: ShootAudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7386083038387452237
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7386083038387452239}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7386083038387452238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7386083038387452239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46bf2e94b8cc3014a83bc048b0722416, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: KillSound
+    group: Foley
+    clip: {fileID: 8300000, guid: 680adf19c3757f5428e8083b3c0d22da, type: 3}
+    source: {fileID: 0}
+  - name: WinSound
+    group: SFX
+    clip: {fileID: 8300000, guid: e70aa3d0f0b4f4e44a6f6ebfc9e19fc0, type: 3}
+    source: {fileID: 0}
+  - name: DryFire
+    group: SFX
+    clip: {fileID: 8300000, guid: 4746d84f7fab0e04691dddbed2068f95, type: 3}
+    source: {fileID: 0}
+  - name: MissSound
+    group: SFX
+    clip: {fileID: 8300000, guid: 5a5ea77d9d70daf41ab6cf73165fcb9b, type: 3}
+    source: {fileID: 0}
+  - name: Music
+    group: Music
+    clip: {fileID: 8300000, guid: 7f55367c00c78734b9b680697df35c87, type: 3}
+    source: {fileID: 0}
+  musicGroup: {fileID: 437274009150184131, guid: 6e79c7d99d7c5044b9043692b5f16118,
+    type: 2}
+  sfxGroup: {fileID: 916057840464547849, guid: 6e79c7d99d7c5044b9043692b5f16118, type: 2}
+  foleyGroup: {fileID: -961915754546778152, guid: 6e79c7d99d7c5044b9043692b5f16118,
+    type: 2}
