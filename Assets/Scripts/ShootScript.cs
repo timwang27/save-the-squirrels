@@ -37,7 +37,6 @@ public class ShootScript : MonoBehaviour
                     ShootScoreManager.instance.AddPoint();
                     if (ShootScoreManager.instance.remaining == 0)
                     {
-                        FindObjectOfType<ShootAudioManager>().Play("WinSound");
                         FindObjectOfType<GameManager>().WinGame();
                         canShoot = false;
                     }

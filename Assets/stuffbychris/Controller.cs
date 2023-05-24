@@ -21,12 +21,6 @@ public class Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (acornsLeft == 0)
-        {
-            gameFinished = true;
-            FindObjectOfType<ChrisSceneManager>().LoadWin();
-        }
-
         Vector3 tilt = Input.acceleration;
 
         if (isFlat)
@@ -49,6 +43,11 @@ public class Controller : MonoBehaviour
         GameObject text = GameObject.FindGameObjectWithTag("Text");
         AcornsCounter acornsCount = text.GetComponent<AcornsCounter>();
         acornsCount.updateAcornsAmount();
+        if (acornsLeft == 0)
+        {
+            gameFinished = true;
+            FindObjectOfType<ChrisSceneManager>().LoadWin();
+        }
     }
 
 }

@@ -38,22 +38,25 @@ public class CarGameManager : MonoBehaviour
     public void LoseGame()
     {
         SceneManager.LoadScene("CarLoseScene");
-        MusicScript.instance.GetComponent<AudioSource>().Stop();
     }
 
     public void WinGame()
     {
-        PlayerPrefs.SetInt("currEvent", 3);
-        SceneManager.LoadScene("CarEnd");
-        MusicScript.instance.GetComponent<AudioSource>().Stop();
+        StartCoroutine(WinGameIE());
     }
 
     public void MainMenu()
     {
         SceneManager.LoadScene("CarTitleScene");
-        MusicScript.instance.GetComponent<AudioSource>().Play();
     }
 
+    IEnumerator WinGameIE()
+    {
+        PlayerPrefs.SetInt("currEvent", 3);
+        FindObjectOfType<CarAudioManager>().Play("WinSound");
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene("CarEnd");
+    }
     #endregion
 
 }

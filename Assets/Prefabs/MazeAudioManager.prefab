@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5497253356286022388
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5497253356286022386}
+  - component: {fileID: 5497253356286022387}
+  m_Layer: 0
+  m_Name: MazeAudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5497253356286022386
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5497253356286022388}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 413.98798, y: 896, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5497253356286022387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5497253356286022388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf19ad8dd362c45fba8f7114ae51d648, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Music
+    group: Music
+    clip: {fileID: 8300000, guid: c4b696c9dbf2a49959688e4cd78336c8, type: 3}
+    source: {fileID: 0}
+  - name: CollectSound
+    group: SFX
+    clip: {fileID: 8300000, guid: 00fc3aff968f9408da1ecacfac4dca3c, type: 3}
+    source: {fileID: 0}
+  - name: WinSound
+    group: SFX
+    clip: {fileID: 8300000, guid: e70aa3d0f0b4f4e44a6f6ebfc9e19fc0, type: 3}
+    source: {fileID: 0}
+  musicGroup: {fileID: -2245276208566096324, guid: 67d895ec776f84dc0b98fcdff1e6df18, type: 2}
+  sfxGroup: {fileID: -2581253704932705229, guid: 67d895ec776f84dc0b98fcdff1e6df18, type: 2}
+  foleyGroup: {fileID: 6077671699664663519, guid: 67d895ec776f84dc0b98fcdff1e6df18, type: 2}

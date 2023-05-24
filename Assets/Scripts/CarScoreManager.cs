@@ -6,32 +6,29 @@ using UnityEngine.UI;
 
 public class CarScoreManager : MonoBehaviour
 {
-
     public static CarScoreManager instance;
-
     public TMP_Text scoreText;
-    public AudioSource nom;
-    public AudioSource ew;
-
     int score = 0;
 
     private void Awake()
     {
         instance = this;
     }
+
     // Start is called before the first frame update
     void Start()
     {
+        //FindObjectOfType<BasketAudioManager>().Play("Music");
         scoreText.text = "Score: " + score.ToString();
     }
 
     public void AddPoint()
     {
-        CarScoreManager.instance.nom.Stop();
         score += 1;
         scoreText.text = "Score: " + score.ToString();
-        CarScoreManager.instance.nom.Play();
-        if (score >= 50)
+        FindObjectOfType<CarAudioManager>().Play("Nom");
+        //Change to 50
+        if (score >= 5)
         {
             CarGameManager.Instance.WinGame();
         }
@@ -39,7 +36,7 @@ public class CarScoreManager : MonoBehaviour
 
     public void LosePoint()
     {
-        CarScoreManager.instance.ew.Stop();
+        FindObjectOfType<CarAudioManager>().Play("Ew");
         if (score > 1)
         {
            score -= 2;
@@ -47,7 +44,6 @@ public class CarScoreManager : MonoBehaviour
         {
             score -= 1;
         }
-        CarScoreManager.instance.ew.Play();
         scoreText.text = "Score: " + score.ToString();
     }
 }

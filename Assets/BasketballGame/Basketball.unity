@@ -770,7 +770,7 @@ PrefabInstance:
       objectReference: {fileID: 1110273685663472682, guid: 61a4286f8f76b48c788aa11afaaefc75, type: 2}
     - target: {fileID: 4018107594955586630, guid: 9e015fe8b10cd407488e48727a19eded, type: 3}
       propertyPath: sounds.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4018107594955586630, guid: 9e015fe8b10cd407488e48727a19eded, type: 3}
       propertyPath: sounds.Array.data[0].name
@@ -779,14 +779,26 @@ PrefabInstance:
     - target: {fileID: 4018107594955586630, guid: 9e015fe8b10cd407488e48727a19eded, type: 3}
       propertyPath: sounds.Array.data[2].clip
       value: 
-      objectReference: {fileID: 8300000, guid: c4b696c9dbf2a49959688e4cd78336c8, type: 3}
+      objectReference: {fileID: 8300000, guid: d1f0df1966f4ce146b086680986bb31e, type: 3}
     - target: {fileID: 4018107594955586630, guid: 9e015fe8b10cd407488e48727a19eded, type: 3}
       propertyPath: sounds.Array.data[2].name
       value: squirrelSong
       objectReference: {fileID: 0}
     - target: {fileID: 4018107594955586630, guid: 9e015fe8b10cd407488e48727a19eded, type: 3}
+      propertyPath: sounds.Array.data[3].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: e70aa3d0f0b4f4e44a6f6ebfc9e19fc0, type: 3}
+    - target: {fileID: 4018107594955586630, guid: 9e015fe8b10cd407488e48727a19eded, type: 3}
+      propertyPath: sounds.Array.data[3].name
+      value: WinSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 4018107594955586630, guid: 9e015fe8b10cd407488e48727a19eded, type: 3}
       propertyPath: sounds.Array.data[2].group
       value: Music
+      objectReference: {fileID: 0}
+    - target: {fileID: 4018107594955586630, guid: 9e015fe8b10cd407488e48727a19eded, type: 3}
+      propertyPath: sounds.Array.data[3].group
+      value: SFX
       objectReference: {fileID: 0}
     - target: {fileID: 6677662674376403748, guid: 9e015fe8b10cd407488e48727a19eded, type: 3}
       propertyPath: m_Name

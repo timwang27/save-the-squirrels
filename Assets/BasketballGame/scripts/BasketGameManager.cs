@@ -27,7 +27,14 @@ public class BasketGameManager : MonoBehaviour
 
     public void WinGame()
     {
+        StartCoroutine(WinGameIE());
+    }
+
+    IEnumerator WinGameIE()
+    {
         PlayerPrefs.SetInt("currEvent", 2);
+        FindObjectOfType<BasketAudioManager>().Play("WinSound");
+        yield return new WaitForSeconds(5);
         SceneManager.LoadScene("BasketEnd");
     }
 

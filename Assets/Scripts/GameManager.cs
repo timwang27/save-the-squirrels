@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     }
     public void WinGame()
     {
-        SceneManager.LoadScene("ShootEnd");
+        StartCoroutine(WinGameIE());
     }
     public void LoseGame()
     {
@@ -21,5 +21,12 @@ public class GameManager : MonoBehaviour
     public void Quit()
     {
         SceneManager.LoadScene("Map");
+    }
+
+    IEnumerator WinGameIE()
+    {
+        FindObjectOfType<ShootAudioManager>().Play("WinSound");
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene("ShootEnd");
     }
 }

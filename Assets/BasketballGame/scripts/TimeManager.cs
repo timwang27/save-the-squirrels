@@ -29,10 +29,6 @@ public class TimeManager : MonoBehaviour
             timeLeft -= Time.deltaTime;
             UpdateTimer(timeLeft);
             score = target.GetComponent<ScoreCounter>().getScore();
-            if (timeLeft > 0 && score >= winScore)
-            {
-                FindObjectOfType<BasketGameManager>().WinGame();
-            }
             if (timeLeft <= 0 && score < winScore)
             {
                 timeLeft = 0;

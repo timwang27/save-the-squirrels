@@ -22,7 +22,10 @@ public class ScoreCounter : MonoBehaviour
             FindObjectOfType<BasketAudioManager>().Play("Point");
             score += 1;
             scoreText.text = "Score: " + score + "/5";
-
+            if (score == 5)
+            {
+                FindObjectOfType<BasketGameManager>().WinGame();
+            }
         }
     }
 

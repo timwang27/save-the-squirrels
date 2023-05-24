@@ -6,6 +6,10 @@ using UnityEngine.SceneManagement;
 public class ChrisSceneManager : MonoBehaviour
 {
     // Start is called before the first frame update
+    void Start()
+    {
+        FindObjectOfType<MazeAudioManager>().Play("Music");
+    }
 
     public void LoadIntro()
     {
@@ -20,8 +24,7 @@ public class ChrisSceneManager : MonoBehaviour
 
     public void LoadWin()
     {
-        PlayerPrefs.SetInt("currEvent", 1);
-        SceneManager.LoadScene("MazeEnd");
+        StartCoroutine(LoadWinIE());
     }
 
     public void LoadLose()
@@ -32,6 +35,14 @@ public class ChrisSceneManager : MonoBehaviour
     public void Quit()
     {
         SceneManager.LoadScene("Map");
+    }
+
+    IEnumerator LoadWinIE()
+    {
+        PlayerPrefs.SetInt("currEvent", 1);
+        FindObjectOfType<MazeAudioManager>().Play("WinSound");
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene("MazeEnd");
     }
 
 
