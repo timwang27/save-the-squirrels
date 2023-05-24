@@ -9,7 +9,6 @@ public class Acorn : MonoBehaviour
         if (collision.transform.CompareTag("Player"))
         {
             collision.transform.GetComponent<Controller>().updateAcornsAmount(-1);
-            FindObjectOfType<MazeAudioManager>().Play("CollectSound");
             Destroy(this.gameObject);
         }
     }

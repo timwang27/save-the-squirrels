@@ -9,6 +9,7 @@ public class CarScoreManager : MonoBehaviour
     public static CarScoreManager instance;
     public TMP_Text scoreText;
     int score = 0;
+    bool wonGame = false;
 
     private void Awake()
     {
@@ -24,26 +25,33 @@ public class CarScoreManager : MonoBehaviour
 
     public void AddPoint()
     {
-        score += 1;
-        scoreText.text = "Score: " + score.ToString();
-        FindObjectOfType<CarAudioManager>().Play("Nom");
-        //Change to 50
-        if (score >= 5)
+        if (!wonGame)
         {
-            CarGameManager.Instance.WinGame();
+            score += 1;
+            scoreText.text = "Score: " + score.ToString();
+            FindObjectOfType<CarAudioManager>().Play("Nom");
+            //Change to 50
+            if (score >= 5)
+            {
+                wonGame = true;
+                CarGameManager.Instance.WinGame();
+            }
         }
     }
 
     public void LosePoint()
     {
-        FindObjectOfType<CarAudioManager>().Play("Ew");
-        if (score > 1)
+        if (!wonGame)
         {
-           score -= 2;
-        } else if (score == 1)
-        {
-            score -= 1;
+            FindObjectOfType<CarAudioManager>().Play("Ew");
+            if (score > 1)
+            {
+            score -= 2;
+            } else if (score == 1)
+            {
+                score -= 1;
+            }
+            scoreText.text = "Score: " + score.ToString();
         }
-        scoreText.text = "Score: " + score.ToString();
     }
 }

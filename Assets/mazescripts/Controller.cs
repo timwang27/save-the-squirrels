@@ -46,7 +46,11 @@ public class Controller : MonoBehaviour
         if (acornsLeft == 0)
         {
             gameFinished = true;
-            FindObjectOfType<ChrisSceneManager>().LoadWin();
+            FindObjectOfType<MazeSceneManager>().LoadWin();
+        }
+        else
+        {
+            FindObjectOfType<MazeAudioManager>().Play("CollectSound");
         }
     }
 

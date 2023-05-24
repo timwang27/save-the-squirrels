@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ChrisSceneManager : MonoBehaviour
+public class MazeSceneManager : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
-        FindObjectOfType<MazeAudioManager>().Play("Music");
     }
 
     public void LoadIntro()

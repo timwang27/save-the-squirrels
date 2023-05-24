@@ -27,7 +27,7 @@ public class MazeTimer : MonoBehaviour
             if (timeLeft <= 0)
             {
                 timeLeft = 0;
-                FindObjectOfType<ChrisSceneManager>().LoadLose();
+                FindObjectOfType<MazeSceneManager>().LoadLose();
             } 
         }
         
