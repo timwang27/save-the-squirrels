@@ -3,12 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Maze
+  - Text
+  - Acorn
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Squirrel
   - Water
   - UI
   - 

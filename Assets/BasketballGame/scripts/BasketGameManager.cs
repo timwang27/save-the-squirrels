@@ -34,7 +34,7 @@ public class BasketGameManager : MonoBehaviour
     {
         PlayerPrefs.SetInt("currEvent", 2);
         FindObjectOfType<BasketAudioManager>().Play("WinSound");
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(3);
         SceneManager.LoadScene("BasketEnd");
     }
 

@@ -159,26 +159,26 @@ public class PlayerTouchMovement : MonoBehaviour
         // rb.transform.LookAt(moveDir + scaledMovement, Vector3.up);
     }
 
-    private void OnGUI()
-    {
-        GUIStyle labelStyle = new GUIStyle()
-        {
-            fontSize = 24,
-            normal = new GUIStyleState()
-            {
-                textColor = Color.white
-            }
-        };
-        if (MovementFinger != null)
-        {
-            GUI.Label(new Rect(10, 35, 500, 20), $"Finger Start Position: {MovementFinger.currentTouch.startScreenPosition}", labelStyle);
-            GUI.Label(new Rect(10, 65, 500, 20), $"Finger Current Position: {MovementFinger.currentTouch.screenPosition}", labelStyle);
-        }
-        else
-        {
-            GUI.Label(new Rect(10, 35, 500, 20), "No Current Movement Touch", labelStyle);
-        }
+    // private void OnGUI()
+    // {
+    //     GUIStyle labelStyle = new GUIStyle()
+    //     {
+    //         fontSize = 24,
+    //         normal = new GUIStyleState()
+    //         {
+    //             textColor = Color.white
+    //         }
+    //     };
+    //     if (MovementFinger != null)
+    //     {
+    //         GUI.Label(new Rect(10, 35, 500, 20), $"Finger Start Position: {MovementFinger.currentTouch.startScreenPosition}", labelStyle);
+    //         GUI.Label(new Rect(10, 65, 500, 20), $"Finger Current Position: {MovementFinger.currentTouch.screenPosition}", labelStyle);
+    //     }
+    //     else
+    //     {
+    //         GUI.Label(new Rect(10, 35, 500, 20), "No Current Movement Touch", labelStyle);
+    //     }
 
-        GUI.Label(new Rect(10, 10, 500, 20), $"Screen Size ({Screen.width}, {Screen.height})", labelStyle);
-    }
+    //     GUI.Label(new Rect(10, 10, 500, 20), $"Screen Size ({Screen.width}, {Screen.height})", labelStyle);
+    // }
 }

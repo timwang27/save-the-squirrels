@@ -1,4 +1,4 @@
- using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -54,7 +54,7 @@ public class CarGameManager : MonoBehaviour
     {
         PlayerPrefs.SetInt("currEvent", 3);
         FindObjectOfType<CarAudioManager>().Play("WinSound");
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(3);
         SceneManager.LoadScene("CarEnd");
     }
     #endregion

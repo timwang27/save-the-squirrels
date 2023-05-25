@@ -50,8 +50,4 @@ public class TimeManager : MonoBehaviour
         float seconds = Mathf.FloorToInt(currentTime % 60);
         timeText.text = string.Format("{0:00} : {1:00}", minutes, seconds);
     }
-
-    
-
-    
 }

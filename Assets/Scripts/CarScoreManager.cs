@@ -1,13 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class CarScoreManager : MonoBehaviour
 {
     public static CarScoreManager instance;
-    public TMP_Text scoreText;
+    public Text scoreText;
     int score = 0;
     bool wonGame = false;
 
@@ -30,8 +29,7 @@ public class CarScoreManager : MonoBehaviour
             score += 1;
             scoreText.text = "Score: " + score.ToString();
             FindObjectOfType<CarAudioManager>().Play("Nom");
-            //Change to 50
-            if (score >= 5)
+            if (score >= 50)
             {
                 wonGame = true;
                 CarGameManager.Instance.WinGame();

@@ -40,7 +40,7 @@ public class MazeSceneManager : MonoBehaviour
     {
         PlayerPrefs.SetInt("currEvent", 1);
         FindObjectOfType<MazeAudioManager>().Play("WinSound");
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(3);
         SceneManager.LoadScene("MazeEnd");
     }
 

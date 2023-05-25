@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class CarTimeManager : MonoBehaviour
 {
     public float timeLeft;
-    public TMP_Text timeText;
+    public Text timeText;
     private bool timerOn = false;
 
     // Start is called before the first frame update
@@ -40,6 +40,6 @@ public class CarTimeManager : MonoBehaviour
         currentTime += 1;
         float minutes = Mathf.FloorToInt(currentTime/ 60);
         float seconds = Mathf.FloorToInt(currentTime % 60);
-        timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        timeText.text = string.Format("{0:00} : {1:00}", minutes, seconds);
     }
 }

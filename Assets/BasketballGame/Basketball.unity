@@ -606,7 +606,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 00:00
+  m_Text: '00 : 00'
 --- !u!1001 &746980105695132592
 PrefabInstance:
   m_ObjectHideFlags: 0
