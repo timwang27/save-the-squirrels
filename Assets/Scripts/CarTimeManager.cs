@@ -7,12 +7,12 @@ public class CarTimeManager : MonoBehaviour
 {
     public float timeLeft;
     public Text timeText;
-    private bool timerOn = false;
+    public static bool timerOn = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        timerOn = true;
+        
     }
 
     // Update is called once per frame

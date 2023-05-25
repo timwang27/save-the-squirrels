@@ -46,6 +46,8 @@ public class SquirrelManager : MonoBehaviour
             Squirrel = obj.GetComponent<PlayerTouchMovement>();
             Squirrel.transform.position = Reticle.transform.position;
             PlaneSurfaceManager.LockPlane(Reticle.CurrentPlane);
+            // Start timer
+            CarTimeManager.timerOn = true;
         }
     }
 
@@ -83,7 +85,6 @@ public class SquirrelManager : MonoBehaviour
             {
                 UnityEngine.Pose pose = hit.pose;
                 squirrel.transform.position = pose.position;
-
             }
         } 
     }
