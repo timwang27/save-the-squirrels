@@ -26,9 +26,9 @@ public class CarScoreManager : MonoBehaviour
     {
         if (!wonGame)
         {
+	    FindObjectOfType<CarAudioManager>().Play("Nom");
             score += 1;
             scoreText.text = "Score: " + score.ToString();
-            FindObjectOfType<CarAudioManager>().Play("Nom");
             if (score >= 50)
             {
                 wonGame = true;

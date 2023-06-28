@@ -57,9 +57,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MazeGame/MazeEnd.unity
     guid: f3783e9e1656c436cbc78a67f0d96b93
   - enabled: 1
-    path: Assets/Scenes/MazeGame/WinMazeScene.unity
-    guid: 31852a3fb67423d44818d7da946fab72
-  - enabled: 1
     path: Assets/Scenes/MazeGame/MazeLose.unity
     guid: 5721145a963954807bf817d0057119ee
   m_configObjects:
